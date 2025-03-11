@@ -1,4 +1,6 @@
+import { Button } from "@/components/ui/button";
 import { Facebook, Instagram, Twitter } from "lucide-react";
+import Link from "next/link";
 
 const CTA = () => {
   return (
@@ -16,21 +18,21 @@ const CTA = () => {
           </p>
 
           {/* Tombol Subscribe */}
-          <button className="bg-white text-[#004DE8] font-semibold px-6 py-3 rounded-full shadow-md transition-transform transform hover:scale-105 hover:shadow-lg">
+          <Button className="bg-white text-[#004DE8] font-semibold px-6 py-3 rounded-full shadow-md transition-transform transform hover:scale-105 hover:shadow-lg">
             Subscribe Now
-          </button>
+          </Button>
 
           {/* Ikon Media Sosial */}
           <div className="flex gap-6 mt-4">
-            <a href="#" className="hover:scale-110 transition-transform">
+            <Link href="#" className="hover:scale-110 transition-transform">
               <Facebook size={30} />
-            </a>
-            <a href="#" className="hover:scale-110 transition-transform">
+            </Link>
+            <Link href="#" className="hover:scale-110 transition-transform">
               <Instagram size={30} />
-            </a>
-            <a href="#" className="hover:scale-110 transition-transform">
+            </Link>
+            <Link href="#" className="hover:scale-110 transition-transform">
               <Twitter size={30} />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

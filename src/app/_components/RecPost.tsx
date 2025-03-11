@@ -40,7 +40,7 @@ const RecPost = () => {
         </div>
 
         {/* Deskripsi dengan efek muncul */}
-        <p className="text-gray-600 max-w-3xl text-lg opacity-80 animate-fadeIn">
+        <p className="text-gray-700 max-w-3xl text-lg  animate-fadeIn">
           Discover the latest insights, trends, and stories from our expert
           contributors.
         </p>

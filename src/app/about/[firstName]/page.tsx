@@ -1,4 +1,5 @@
 import { getAuthorByFirstName } from "@/app/api/getAuthorByFirstName";
+import Image from "next/image";
 
 interface AuthorDetailPageProps {
   params: {
@@ -23,7 +24,7 @@ const AuthorDetailPage = async ({
         <div className="max-w-4xl w-full mt-20 bg-white shadow-lg rounded-xl p-6 md:p-10">
           <div className="flex flex-col md:flex-row items-center gap-6">
             {/* Author Image */}
-            <img
+            <Image
               src={author.image}
               alt="Author"
               className="rounded-full w-28 h-28 md:w-32 md:h-32 object-cover border-4 border-gray-200 shadow-sm"

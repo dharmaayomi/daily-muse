@@ -44,6 +44,7 @@ const Navbar = () => {
             alt="logo"
             width={130}
             height={70}
+            loading="lazy"
             style={{ objectFit: "contain" }}
           />
         </Link>
@@ -81,10 +82,11 @@ const Navbar = () => {
           >
             <Search />
           </Link>
-
-          <Button className="bg-[#004DE8] font-semibold hover:bg-[#7ba7ff]">
-            <Link href="/contact">Contact Us</Link>
-          </Button>
+          <Link href="/contact">
+            <Button className="bg-[#004DE8] font-semibold hover:bg-[#7ba7ff]">
+              Contact Us
+            </Button>
+          </Link>
         </div>
         <div className="md:hidden ml-auto">
           <DropdownMenu>
@@ -97,13 +99,13 @@ const Navbar = () => {
               </DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuItem>
+                <Link href="/blogs">Blogs</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
                 <Link href="/about">About</Link>
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <Link href="/service">Services</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Link href="/team">Team</Link>
+                <Link href="/category">Category</Link>
               </DropdownMenuItem>
               <DropdownMenuItem>
                 <Link href="/contact">Contact</Link>

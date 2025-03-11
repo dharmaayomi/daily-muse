@@ -4,10 +4,10 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const images = [
-  "/organized.jpg",
-  "/worklifebalance.jpg",
-  "/reading1.jpg",
-  "/reading.jpg",
+  "/organized.webp",
+  "/worklifebalance.webp",
+  "/reading1.webp",
+  "/reading.webp",
 ];
 
 const CarouselPicture: React.FC = () => {

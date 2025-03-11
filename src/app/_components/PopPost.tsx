@@ -41,7 +41,7 @@ const PopPost = () => {
         </div>
 
         {/* Deskripsi dengan efek muncul */}
-        <p className="text-gray-600  mx-auto md:ml-auto text-lg  text-right opacity-80 animate-fadeIn">
+        <p className="text-gray-700  mx-auto md:ml-auto text-lg  text-right  animate-fadeIn">
           Stay updated with the hottest and most talked-about articles in our
           community.
         </p>
