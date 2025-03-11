@@ -1,15 +1,18 @@
 import { getAuthorByFirstName } from "@/app/api/getAuthorByFirstName";
-import React from "react";
-import authorBlog from "./_components/authorBlog";
-import { getAuthorBlog } from "@/app/api/getAuthorBlog";
+
+interface AuthorDetailPageProps {
+  params: {
+    firstName: string;
+  };
+}
 
 const AuthorDetailPage = async ({
   params,
 }: {
-  params: { firstName: string };
+  params: Promise<{ firstName: string }>;
 }) => {
-  const author = await getAuthorByFirstName(params.firstName);
-
+  const firstname = (await params).firstName;
+  const author = await getAuthorByFirstName(firstname);
   if (!author) {
     return <main className="container mx-auto mt-20">Author not found</main>;
   }
