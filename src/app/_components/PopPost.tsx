@@ -30,18 +30,18 @@ import BlogListSkeleton from "../blogs/_components/BlogListSkeleton";
 
 const PopPost = () => {
   return (
-    <section className="container mx-auto p-6 mt-9 max-w-[90%]">
-      <div className=" mx-4 md:mx-6">
+    <section className="container mx-auto  mt-9 max-w-[90%]">
+      <div className="mx-0 md:mx-6">
         {/* Judul dengan ikon dan garis bawah */}
-        <div className="flex justify-end pb-2 mb-4 items-center gap-3">
-          <Flame size={30} className="text-[#004DE8]" />
-          <h3 className="text-3xl md:text-4xl font-extrabold text-[#004DE8] items-center gap-2 border-b-4 border-[#004DE8] inline-block">
+        <div className="flex justify-end mx-4 pb-2 mb-4 items-center gap-3">
+          <h3 className="text-3xl md:text-5xl font-extrabold text-[#004DE8] items-center gap-2 border-b-4 border-[#004DE8] inline-block">
             Popular Posts
           </h3>
+          <Flame size={30} className="text-[#004DE8]" />
         </div>
 
         {/* Deskripsi dengan efek muncul */}
-        <p className="text-gray-700  mx-auto md:ml-auto text-lg  text-right  animate-fadeIn">
+        <p className="text-gray-700 mx-4 text-lg  text-right  animate-fadeIn">
           Stay updated with the hottest and most talked-about articles in our
           community.
         </p>

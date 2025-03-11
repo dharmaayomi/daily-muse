@@ -1,8 +1,8 @@
 const Jumbotron = () => {
   return (
-    <section className="container pb-10 mx-auto h-[40vh]">
-      <div className="flex  flex-col gap-1 pt-28 pb-12 justify-center items-center ">
-        <h1 className="text-6xl text-gray-800 font-bold mb-3">
+    <section className="container mx-auto mt-20 md:mt-28">
+      <div className="flex  flex-col gap-1 px-4 sm:px-6 mb-12 justify-center items-center ">
+        <h1 className="text-6xl text-center text-gray-800 font-bold mb-3">
           Explore Inspiring Stories & Insights
         </h1>
         <p className="text-lg max-w-4xl text-center">

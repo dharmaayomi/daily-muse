@@ -10,9 +10,6 @@ const BlogList = async () => {
   return (
     <section className="container mt-14 mx-auto p-4">
       <div>
-        {/* {blogs.map((blog) => {
-          return <BlogCard key={blog.objectId} blog={blog} />;
-        })} */}
         {blogs.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {blogs.map((blog) => (

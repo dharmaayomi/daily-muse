@@ -30,17 +30,18 @@ import { FileText } from "lucide-react";
 
 const RecPost = () => {
   return (
-    <section className="container mx-auto p-6 mt-9 max-w-[90%]">
-      <div className="mx-4 md:mx-6 text-center md:text-left">
+    <section className="container mx-auto mt-9 max-w-[90%]">
+      <div className="mx-0 md:mx-6 text-left ">
         {/* Judul dengan efek garis bawah */}
-        <div className="inline-block border-b-4 border-[#004DE8] pb-2 mb-4">
-          <h3 className="text-3xl md:text-4xl font-extrabold text-[#004DE8] flex items-center gap-2">
-            <FileText size={30} /> Recent Posts
+        <div className="inline-block border-b-4 mx-4 border-[#004DE8] pb-2 mb-4">
+          <h3 className="text-3xl md:text-5xl mx-4 text-left font-extrabold text-[#004DE8] flex items-center gap-2">
+            <FileText size={30} />
+            Recent Posts
           </h3>
         </div>
 
         {/* Deskripsi dengan efek muncul */}
-        <p className="text-gray-700 max-w-3xl text-lg  animate-fadeIn">
+        <p className="text-gray-700 max-w-3xl text-lg mx-4 animate-fadeIn">
           Discover the latest insights, trends, and stories from our expert
           contributors.
         </p>

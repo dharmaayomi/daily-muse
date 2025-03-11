@@ -19,7 +19,7 @@ export default async function BlogByCategory() {
 
   return (
     <section className="container mt-5 mx-auto p-4">
-      <div className="mx-10">
+      <div className="mx-0 md:mx-10">
         <div className="space-y-5 p-4">
           {categories.map((category) => {
             const categoryPost = category.blogs.slice(0, 3);
@@ -53,7 +53,9 @@ export default async function BlogByCategory() {
                             <Badge>
                               <p>{blog.category}</p>
                             </Badge>
-                            <h2 className="text-xl font-bold">{blog.title}</h2>
+                            <h2 className="text-xl font-bold line-clamp-2">
+                              {blog.title}
+                            </h2>
 
                             <p className="line-clamp-3">{blog.description}</p>
                             <Badge className="hover:underline bg-[#004DE8] flex gap-2">

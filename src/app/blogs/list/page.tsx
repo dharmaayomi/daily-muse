@@ -56,60 +56,65 @@ const BlogList = () => {
 
   return (
     <main className=" bg-[#fafafa] mt-20 mx-auto p-8">
-      <h2 className="text-2xl md:text-4xl mx-10 font-semibold text-gray-700 text-center mb-6">
-        Discover Insights That Inspire & Transform Your Thinking.
-      </h2>
       {/* Blog list header /} */}
-      <section className="max-w-full mx-10 flex gap-4 mt-11">
-        <Input
-          placeholder="Discover new insights..."
-          onChange={(e) => setSearch(e.target.value)}
-        />
-        <Select value={category} onValueChange={setCategory}>
-          <SelectTrigger className="w-[180px]">
-            <SelectValue placeholder="Category" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="all">All</SelectItem>
-            <SelectItem value="food">Food</SelectItem>
-            <SelectItem value="tips">Tips</SelectItem>
-            <SelectItem value="life">Life</SelectItem>
-            <SelectItem value="book">Book</SelectItem>
-          </SelectContent>
-        </Select>
+      <section className="container mx-auto px-0 md:px-6 mt-8">
+        <div>
+          <h2 className="text-4xl md:text-6xl  font-extrabold  text-gray-700 text-center mb-6">
+            Discover Insights That Inspire & Transform Your Thinking.
+          </h2>
+        </div>
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+          <Input
+            placeholder="Discover new insights..."
+            onChange={(e) => setSearch(e.target.value)}
+            className="w-full sm:w-2/3"
+          />
+          <Select value={category} onValueChange={setCategory}>
+            <SelectTrigger className="w-full sm:w-[200px]">
+              <SelectValue placeholder="Category" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">All</SelectItem>
+              <SelectItem value="food">Food</SelectItem>
+              <SelectItem value="tips">Tips</SelectItem>
+              <SelectItem value="life">Life</SelectItem>
+              <SelectItem value="book">Book</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
       </section>
 
-      {/* {/ Blog list body */}
-      <section className="grid  grid-cols-1 md:grid-cols-3 gap-4 mx-10 mt-12">
-        {isPending && (
-          <div className="flex justify-center items-center h-[50vh] col-span-4">
-            <p className="animate-spin">
-              <Atom size={40} />
-            </p>
+      {/* Blog List */}
+      <section className="container mx-auto px-0 md:px-6 mt-12">
+        {isPending ? (
+          <div className="flex justify-center items-center ">
+            <Atom size={40} className="animate-spin text-gray-500" />
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 animate-fadeIn">
+            {blogs?.data && blogs.data.length > 0 ? (
+              blogs.data.map((blog) => (
+                <BlogCard key={blog.objectId} blog={blog} />
+              ))
+            ) : (
+              <p className="text-gray-500 text-center col-span-1 sm:col-span-2 lg:col-span-3">
+                No blogs found. Try a different search or category.
+              </p>
+            )}
           </div>
         )}
-
-        {blogs?.data.map((blog) => {
-          return <BlogCard key={blog.objectId} blog={blog} />;
-        })}
       </section>
-      {/* yg ini juga bisa diimport ambil dari BlogListBody di component list dan diisi data yg diminta dari bloglistbody */}
 
-      {/* pagination section */}
-      <section className="mt-8">
+      {/* Pagination */}
+      <section className="mt-10 flex justify-center pb-8">
         <Pagination>
           <PaginationContent>
-            {/* button prev */}
             <PaginationItem>
               <PaginationPrevious onClick={handlePrev} />
             </PaginationItem>
-
-            {/* page */}
             <PaginationItem>
               <PaginationLink>{page}</PaginationLink>
             </PaginationItem>
-
-            {/* button next */}
             <PaginationItem>
               <PaginationNext onClick={handleNext} />
             </PaginationItem>
