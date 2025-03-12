@@ -16,7 +16,7 @@ const Blogs = async () => {
   console.log(blogs);
 
   return (
-    <main className="bg-[#fafafa]">
+    <main className=" bg-[#fafafa]">
       <JumbotronGlobal />
       <Suspense fallback={<BlogListSkeleton />}>
         <PopPost />

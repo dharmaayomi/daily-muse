@@ -4,7 +4,8 @@ import Link from "next/link";
 
 const CTA = () => {
   return (
-    <section className="bg-[#004DE8] text-white py-16">
+    // <section className="container mx-auto">
+    <div className="bg-[#004DE8] text-white py-16">
       <div className="container mx-auto p-6">
         <div className="flex flex-col justify-center items-center text-center space-y-6 mx-5 md:mx-28">
           <h3 className="font-extrabold text-2xl md:text-4xl leading-tight animate-fadeIn">
@@ -36,7 +37,8 @@ const CTA = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
+    // </section>
   );
 };
 

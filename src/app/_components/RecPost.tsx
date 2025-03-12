@@ -30,7 +30,7 @@ import { FileText } from "lucide-react";
 
 const RecPost = () => {
   return (
-    <section className="container mx-auto mt-9 max-w-[90%]">
+    <section className="container mx-auto mt-9">
       <div className="mx-0 md:mx-6 text-left ">
         {/* Judul dengan efek garis bawah */}
         <div className="inline-block border-b-4 mx-4 border-[#004DE8] pb-2 mb-4">

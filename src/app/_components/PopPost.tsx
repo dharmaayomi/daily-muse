@@ -30,7 +30,7 @@ import BlogListSkeleton from "../blogs/_components/BlogListSkeleton";
 
 const PopPost = () => {
   return (
-    <section className="container mx-auto  mt-9 max-w-[90%]">
+    <section className="container mx-auto  mt-9 ">
       <div className="mx-0 md:mx-6">
         {/* Judul dengan ikon dan garis bawah */}
         <div className="flex justify-end mx-4 pb-2 mb-4 items-center gap-3">
