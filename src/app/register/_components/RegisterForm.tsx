@@ -1,15 +1,13 @@
 "use client";
 
-import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import Image from "next/image";
+import useRegister from "@/hooks/api/auth/useRegister";
+import { cn } from "@/lib/utils";
 import { useFormik } from "formik";
 import RegisterValidationSchema from "../schema";
-import axios from "axios";
-import useRegister from "@/hooks/api/auth/useRegister";
 
 export default function RegisterForm({
   className,

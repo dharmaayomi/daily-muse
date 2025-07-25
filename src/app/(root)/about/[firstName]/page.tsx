@@ -1,4 +1,4 @@
-import { getAuthorByFirstName } from "@/app/api/getAuthorByFirstName";
+import { getAuthorByFirstName } from "@/app/(root)/api/getAuthorByFirstName";
 import Image from "next/image";
 
 interface AuthorDetailPageProps {

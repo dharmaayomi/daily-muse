@@ -5,7 +5,6 @@ import BlogCard from "./BlogCard";
 
 const BlogList = async () => {
   const blogs = await getBlogs();
-  // console.log("API Response:", blogs);
 
   return (
     <section className="container mt-14 mx-auto p-4">

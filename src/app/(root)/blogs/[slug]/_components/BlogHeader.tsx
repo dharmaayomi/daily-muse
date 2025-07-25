@@ -35,7 +35,7 @@ import { format } from "date-fns";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
-import { getBlog } from "@/app/api/getBlog";
+import { getBlog } from "@/app/(root)/api/getBlog";
 
 interface BlogHeaderProps {
   slug: string;
@@ -43,10 +43,10 @@ interface BlogHeaderProps {
 const BlogHeader: FC<BlogHeaderProps> = async ({ slug }) => {
   const blogs = await getBlog(slug);
   return (
-    <section className="container flex justify-center mt-20 mx-auto p-4">
-      <div className="space-y-3 max-w-[70%]">
+    <section className="container flex justify-center mx-auto mt-20 p-4 ">
+      <div className="space-y-3 w-full md:w-[85%] ">
         <Badge className="capitalize bg-[#004DE8]">{blogs[0].category}</Badge>
-        <h1 className="text-4xl font-bold">{blogs[0].title}</h1>
+        <h2 className="text-4xl font-bold">{blogs[0].title}</h2>
         <div className="flex items-center gap-2">
           <p className="font-light text-sm">
             {format(new Date(blogs[0].created), "dd MMM yyyy")}
@@ -59,12 +59,12 @@ const BlogHeader: FC<BlogHeaderProps> = async ({ slug }) => {
           </Link>
         </div>
 
-        <div className="relative w-full h-[300px] rounded-lg">
+        <div className="relative w-full h-[300px]  rounded-lg">
           <Image
             src={blogs[0].thumbnail}
             alt="thumbnail"
             fill
-            sizes="w-full max-h-[300px]"
+            sizes="w-full max-h-[300px] md:max-h-[400px]"
             className="object-cover rounded-lg overflow-hidden"
           />
         </div>

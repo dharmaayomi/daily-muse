@@ -1,7 +1,6 @@
 import { axiosInstance } from "@/lib/axios";
-import { BASE_URL } from "@/utils/api";
 import { useMutation } from "@tanstack/react-query";
-import axios, { AxiosError } from "axios";
+import { AxiosError } from "axios";
 import { useRouter } from "next/navigation";
 
 interface Payload {
