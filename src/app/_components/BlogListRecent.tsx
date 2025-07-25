@@ -1,6 +1,6 @@
-import { getPopular } from "../api/getPopular";
-import { getRecent } from "../api/getRecent";
-import BlogCard from "../blogs/_components/BlogCard";
+import { getPopular } from "../(root)/api/getPopular";
+import { getRecent } from "../(root)/api/getRecent";
+import BlogCard from "../(root)/blogs/_components/BlogCard";
 
 const BlogListRecent = async () => {
   const blogs = await getRecent();

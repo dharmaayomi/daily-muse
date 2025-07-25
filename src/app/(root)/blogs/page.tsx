@@ -144,7 +144,6 @@ import { Atom } from "lucide-react";
 import { useState } from "react";
 import { useDebounceValue } from "usehooks-ts";
 import BlogCard from "./_components/BlogCard";
-import Jumbotron from "./_components/Jumbotron";
 
 const LIMIT = 6;
 

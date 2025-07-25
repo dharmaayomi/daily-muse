@@ -1,4 +1,4 @@
-import { getAuthors } from "@/app/api/getAuthors";
+import { getAuthors } from "@/app/(root)/api/getAuthors";
 import Link from "next/link";
 
 const AuthorCard = async () => {

@@ -43,7 +43,6 @@ const ContactForm: React.FC = () => {
     setIsSubmitting(true);
     try {
       await new Promise((resolve) => setTimeout(resolve, 2000));
-      console.log(data);
       setShowSuccess(true);
       setTimeout(() => {
         setShowSuccess(false);

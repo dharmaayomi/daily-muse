@@ -1,4 +1,4 @@
-import { getAuthorByFirstName } from "@/app/api/getAuthorByFirstName";
+import { getAuthorByFirstName } from "@/app/(root)/api/getAuthorByFirstName";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Blog } from "@/types/blog";
 import { MoveRight } from "lucide-react";
@@ -6,15 +6,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
 import { Badge } from "@/components/ui/badge";
+import { User } from "@/types/user";
 
-interface BlogCardProps {
+interface AuthorCardProps {
+  user: User;
   blog: Blog;
 }
 
-const BlogCard: FC<BlogCardProps> = ({ blog }) => {
-  console.log(blog);
+const BlogAuthor: FC<AuthorCardProps> = ({ user, blog }) => {
   return (
-    <Link href={`/blogs/${blog.slug}`}>
+    <Link href={`/blogs/${user.firstName}`}>
       <Card>
         <CardHeader>
           <div className="relative w-full h-[220px] rounded-lg overflow-hidden">
@@ -33,7 +34,7 @@ const BlogCard: FC<BlogCardProps> = ({ blog }) => {
             <Badge>
               <p>{blog.category}</p>
             </Badge>
-            <h2 className="text-xl font-bold line-clamp-2">{blog.title}</h2>
+            <h2 className="text-xl font-bold">{blog.title}</h2>
 
             <p className="line-clamp-3">{blog.description}</p>
             <Badge className="hover:underline bg-[#004DE8] flex gap-2">
@@ -46,4 +47,4 @@ const BlogCard: FC<BlogCardProps> = ({ blog }) => {
   );
 };
 
-export default BlogCard;
+export default BlogAuthor;

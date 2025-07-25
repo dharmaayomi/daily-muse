@@ -26,7 +26,7 @@
 import { Flame } from "lucide-react";
 import React, { Suspense } from "react";
 import BlogListGlobal from "./BlogListGlobal";
-import BlogListSkeleton from "../blogs/_components/BlogListSkeleton";
+import BlogListSkeleton from "../(root)/blogs/_components/BlogListSkeleton";
 
 const PopPost = () => {
   return (

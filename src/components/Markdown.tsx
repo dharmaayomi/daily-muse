@@ -9,16 +9,16 @@ interface MarkdownProps {
 const Markdown: FC<MarkdownProps> = ({ content }) => {
   const renderers: Components = {
     h2: ({ children }) => (
-      <h2 className="text-xl font-bold mb-2">{children}</h2>
+      <h2 className="text-2xl font-bold mb-2">{children}</h2>
     ),
     p: ({ children }) => (
-      <p className="text-base font-light mb-4 text-justify">{children}</p>
+      <p className="text-medium font-light mb-4 text-justify">{children}</p>
     ),
     li: ({ children }) => (
-      <li className="text-base font-light list-disc ml-6">{children}</li>
+      <li className="text-medium font-light list-disc ml-6">{children}</li>
     ),
     ul: ({ children }) => (
-      <ul className="text-base font-light list-disc ml-4">{children}</ul>
+      <ul className="text-medium font-light list-disc ml-4">{children}</ul>
     ),
     strong: ({ children }) => (
       <strong className="font-semibold">{children}</strong>

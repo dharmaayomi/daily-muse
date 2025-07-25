@@ -36,9 +36,9 @@ export default function RootLayout({
       <body className={`${dm_sans.className}  antialiased`}>
         {/* <StoreProvider> */}
         <ReactQueryProviders>
-          <Navbar />
+          {/* <Navbar /> */}
           {children}
-          <Footer />
+          {/* <Footer /> */}
         </ReactQueryProviders>
         {/* </StoreProvider> */}
       </body>

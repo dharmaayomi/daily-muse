@@ -24,7 +24,7 @@
 
 import React, { Suspense } from "react";
 import BlogListGlobal from "./BlogListGlobal";
-import BlogListSkeleton from "../blogs/_components/BlogListSkeleton";
+import BlogListSkeleton from "../(root)/blogs/_components/BlogListSkeleton";
 import BlogListRecent from "./BlogListRecent";
 import { FileText } from "lucide-react";
 

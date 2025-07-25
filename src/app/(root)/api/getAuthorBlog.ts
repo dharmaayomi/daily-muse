@@ -7,7 +7,6 @@ export const getAuthorBlog = cache(async (firstName: string) => {
     `https://servicestew-us.backendless.app/api/data/blogs?where=%60firstName%60%20%3D%20'${firstName}'&loadRelations=userBlogs'`
   );
   const blogs: Blog[] = await response.json();
-  //   console.log(user);
 
   return blogs;
 });

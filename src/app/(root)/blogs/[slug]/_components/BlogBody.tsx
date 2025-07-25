@@ -11,7 +11,7 @@ const BlogBody: FC<BlogBodyProps> = async ({ slug }) => {
   const blogs = await getBlog(slug);
   return (
     <section className="container flex justify-center mx-auto p-4">
-      <div className="space-y-3 max-w-[70%]">
+      <div className="space-y-3 max-w-full md:max-w-[85%] ">
         <Markdown content={blogs[0].content} />
         <IncrementViews
           objectId={blogs[0].objectId}
